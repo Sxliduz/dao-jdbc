@@ -49,7 +49,7 @@ public class SellerDaoJDBC implements SellerDao{
 					int id = rs.getInt(1);
 					obj.setId(id);
 				}
-				DB.closerResultSet(rs);
+				DB.closeResultSet(rs);
 			}
 			else {
 				throw new DbException("Unexpected error! No rows affected!");
@@ -129,7 +129,7 @@ public class SellerDaoJDBC implements SellerDao{
 		}
 		finally {
 			DB.closeStatement(st);
-			DB.closerResultSet(rs);
+			DB.closeResultSet(rs);
 		}
 	}
 
@@ -186,7 +186,7 @@ public class SellerDaoJDBC implements SellerDao{
 		}
 		finally {
 			DB.closeStatement(st);
-			DB.closerResultSet(rs);
+			DB.closeResultSet(rs);
 		}
 	}
 
@@ -228,7 +228,7 @@ public class SellerDaoJDBC implements SellerDao{
 		}
 		finally {
 			DB.closeStatement(st);
-			DB.closerResultSet(rs);
+			DB.closeResultSet(rs);
 		}
 	}
 }
